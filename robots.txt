@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sdbtools.xyz/sitemap.xml
