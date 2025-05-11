@@ -38,11 +38,27 @@
       cursor: pointer;
       z-index: 999;
     }
+    .tool-card {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .light .tool-card {
+      background-color: #fff;
+      border-color: #ccc;
+    }
+    a.button {
+      display: inline-block;
+      background: #4ea8de;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
   </style>
-
-  <!-- AdSense script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7587318092349249" crossorigin="anonymous"></script>
-  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJCMDN14VM"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -54,35 +70,56 @@
 <body>
   <button class="toggle-theme" onclick="toggleTheme()">🌓 Cambia tema</button>
 
-  <h1>SDB Tools</h1>
-  <p>Strumenti online per convertire, ottimizzare, automatizzare.</p>
+  <header class="container">
+    <h1>SDB Tools</h1>
+    <p>Strumenti online per convertire, ottimizzare, automatizzare.</p>
+  </header>
 
-  <h2>Strumenti disponibili</h2>
+  <main class="container">
+    <h2>Strumenti disponibili</h2>
 
-  <div class="adsense-box">
-    <!-- Annuncio AdSense Manuale -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-7587318092349249"
-        data-ad-slot="8933843351"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
+    <div class="adsense-box">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-7587318092349249"
+           data-ad-slot="8933843351"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <div class="tool-card">
+      <h3>🧠 OCR Converter</h3>
+      <p>Estrai testo da immagini e PDF con un click. Nessuna installazione.</p>
+      <a class="button" href="https://ocr-render-19fi.onrender.com" target="_blank">Avvia OCR →</a>
+    </div>
+
+    <div class="tool-card">
+      <h3>📄 PDF Tools</h3>
+      <p>In arrivo: unisci, dividi, comprimi e altro.</p>
+      <a class="button" href="#">Coming soon</a>
+    </div>
+
+    <div class="tool-card">
+      <h3>🖼️ Immagini</h3>
+      <p>Conversione immagini tra formati (JPG, PNG, WebP…)</p>
+      <a class="button" href="#">Coming soon</a>
+    </div>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 SDB Tools – Tutti i diritti riservati.</p>
+  </footer>
 
   <script>
-    // Attiva dark mode di default
     document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.add('dark-mode');
     });
-
-    // Cambia tema manualmente
     function toggleTheme() {
       document.body.classList.toggle('light-mode');
     }
   </script>
 </body>
 </html>
-
