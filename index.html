@@ -1,75 +1,82 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <title>SDB Tools – Convertitori online gratuiti: OCR, PDF, immagini</title>
-  <meta name="description" content="SDB Tools offre strumenti online gratuiti per convertire PDF, immagini, testo e molto altro. Prova subito il nostro OCR online.">
-  <meta name="keywords" content="OCR online, convertire PDF, immagini in testo, estrazione testo, convertitore PDF, tool online gratuito">
-
-  <!-- Open Graph per social preview -->
-  <meta property="og:title" content="SDB Tools – Convertitori online gratuiti">
-  <meta property="og:description" content="Usa strumenti gratuiti per OCR, PDF, immagini e altro direttamente dal browser.">
-  <meta property="og:url" content="https://sdbtools.xyz">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://sdbtools.xyz/assets/preview.png">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SDB Tools</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-  <!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7587318092349249"
-     crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #111;
+      color: #f0f0f0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .light body {
+      background-color: #fff;
+      color: #111;
+    }
+    .adsense-box {
+      padding: 16px;
+      border-radius: 12px;
+      margin: 24px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      border: 1px solid #444;
+      background-color: #1e1e1e;
+    }
+    .light .adsense-box {
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+    .toggle-mode {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
 
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SJCMDN14VM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SJCMDN14VM');
-</script>
-
+  <!-- AdSense script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7587318092349249" crossorigin="anonymous"></script>
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJCMDN14VM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SJCMDN14VM');
+  </script>
 </head>
-
 <body>
-  <header>
-    <div class="container">
-      <h1>SDB Tools</h1>
-      <p>Strumenti online per convertire, ottimizzare, automatizzare.</p>
-    </div>
-  </header>
+  <button class="toggle-mode" onclick="toggleTheme()">🌓 Cambia tema</button>
 
-  <main>
-    <section class="tools">
-      <h2>Strumenti disponibili</h2>
-      <div class="tool-list">
-        <div class="tool">
-          <h3>🧠 OCR Converter</h3>
-          <p>Estrai testo da immagini e PDF con un click. Nessuna installazione.</p>
-          <form action="https://ocr-render-19fi.onrender.com" method="get" target="_blank">
-            <button type="submit">🚀 Avvia OCR</button>
-          </form>
-        </div>
+  <h1>SDB Tools</h1>
+  <p>Strumenti online per convertire, ottimizzare, automatizzare.</p>
 
-        <div class="tool">
-          <h3>📄 PDF Tools</h3>
-          <p>In arrivo: unisci, dividi, comprimi e altro.</p>
-          <a href="#">Coming soon</a>
-        </div>
+  <h2>Strumenti disponibili</h2>
 
-        <div class="tool">
-          <h3>🖼️ Immagini</h3>
-          <p>Conversione immagini tra formati (JPG, PNG, WebP…)</p>
-          <a href="#">Coming soon</a>
-        </div>
-      </div>
-    </section>
-  </main>
+  <div class="adsense-box">
+    <!-- Annuncio AdSense Manuale -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-7587318092349249"
+        data-ad-slot="8933843351"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 SDB Tools – Tutti i diritti riservati.</p>
-  </footer>
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('light');
+      html.classList.toggle('dark');
+    }
+  </script>
 </body>
 </html>
