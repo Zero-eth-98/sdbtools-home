@@ -28,14 +28,15 @@
       background-color: #fff;
       border: 1px solid #ddd;
     }
-    .toggle-mode {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+    .toggle-theme {
+      position: fixed;
+      top: 12px;
+      right: 12px;
       padding: 8px 16px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      z-index: 999;
     }
   </style>
 
@@ -51,7 +52,7 @@
   </script>
 </head>
 <body>
-  <button class="toggle-mode" onclick="toggleTheme()">🌓 Cambia tema</button>
+  <button class="toggle-theme" onclick="toggleTheme()">🌓 Cambia tema</button>
 
   <h1>SDB Tools</h1>
   <p>Strumenti online per convertire, ottimizzare, automatizzare.</p>
@@ -72,11 +73,16 @@
   </div>
 
   <script>
+    // Attiva dark mode di default
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('dark-mode');
+    });
+
+    // Cambia tema manualmente
     function toggleTheme() {
-      const html = document.documentElement;
-      html.classList.toggle('light');
-      html.classList.toggle('dark');
+      document.body.classList.toggle('light-mode');
     }
   </script>
 </body>
 </html>
+
